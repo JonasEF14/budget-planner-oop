@@ -10,13 +10,13 @@ def show_menu():
 def prompt_entry():
     typ = input("Typ (income/expense): ").strip().lower()
     if typ not in ["income", "expense"]:
-        print("❌ Ungültiger Typ.")
+        print(" Ungültiger Typ.")
         return None
     description = input("Beschreibung: ")
     try:
         amount = float(input("Betrag (€): "))
     except ValueError:
-        print("❌ Ungültiger Betrag.")
+        print(" Ungültiger Betrag.")
         return None
     return Entry(typ, description, amount)
 
@@ -29,9 +29,9 @@ def print_entries(entries):
 
 def print_summary(planner):
     income, expense, balance = planner.get_summary()
-    print(f"\n💰 Einnahmen: {income:.2f} €")
-    print(f"💸 Ausgaben:  {expense:.2f} €")
-    print(f"📊 Saldo:     {balance:.2f} €\n")
+    print(f"\n Einnahmen: {income:.2f} €")
+    print(f" Ausgaben:  {expense:.2f} €")
+    print(f" Saldo:     {balance:.2f} €\n")
 
 def main():
     planner = BudgetPlanner()
@@ -43,7 +43,7 @@ def main():
             entry = prompt_entry()
             if entry:
                 planner.add_entry(entry)
-                print("✅ Eintrag gespeichert.")
+                print(" Eintrag gespeichert.")
         elif choice == "2":
             print_entries(planner.list_entries())
         elif choice == "3":
