@@ -1,7 +1,7 @@
 #erstellt von Kubilay Yildirim, Jonas Egger, Valentin Rauter
-#dies ist ein Budget Planer sprich man gibt seine  einkommen und ausgaben ein.
-#somit hat man sein Geld besser im Überblick
-#sollte etwas kreatives als sich auch als nützlich erweisend sein
+#dies ist ein Budget Planer, sprich man gibt seine Einkommen und Ausgaben ein.
+#somit hat man sein Geld besser im Überblick.
+#sollte etwas kreatives sein und sich als nützlich erweisen.
 
 import tkinter as tk
 from tkinter import messagebox
