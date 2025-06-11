@@ -3,15 +3,15 @@
 #somit hat man sein Geld besser im Überblick.
 #sollte etwas kreatives sein und sich als nützlich erweisen.
 
-import tkinter as tk
-from tkinter import messagebox
-from tkinter import ttk
-from planner import BudgetPlanner, Entry
+import tkinter as tk #bibliothek
+from tkinter import messagebox #bibliothek
+from tkinter import ttk #bibliothek
+from planner import BudgetPlanner, Entry #bibliothek
 
-class BudgetGUI:
-    def __init__(self, root):
+class BudgetGUI: #klasse des budget planers
+    def __init__(self, root): #werte
         self.root = root
-        self.root.title("Budget Planer")
+        self.root.title("Budget Planer") #titel
         self.planner = BudgetPlanner()
 
         self.setup_widgets()
