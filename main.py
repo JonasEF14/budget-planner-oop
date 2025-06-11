@@ -1,3 +1,8 @@
+#erstellt von Kubilay Yildirim, Jonas Egger, Valentin Rauter
+#dies ist ein Budget Planer sprich man gibt seine  einkommen und ausgaben ein.
+#somit hat man sein Geld besser im Überblick
+#sollte etwas kreativ als auch nützlich sein
+
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
