@@ -3,15 +3,15 @@
 #somit hat man sein Geld besser im Überblick.
 #sollte etwas kreatives sein und sich als nützlich erweisen.
 
-import tkinter as tk #bibliothek
-from tkinter import messagebox #bibliothek
-from tkinter import ttk #bibliothek
-from planner import BudgetPlanner, Entry #bibliothek
+import tkinter as tk  # bibliothek
+from tkinter import messagebox  # bibliothek
+from tkinter import ttk  # bibliothek
+from planner import BudgetPlanner, Entry  # bibliothek
 
-class BudgetGUI: #klasse des budget planers
-    def __init__(self, root): #werte
+class BudgetGUI:  # klasse des budget planers
+    def _init_(self, root):  # werte
         self.root = root
-        self.root.title("Budget Planer") #titel
+        self.root.title("Budget Planer")  # titel
         self.planner = BudgetPlanner()
 
         self.setup_widgets()
@@ -76,16 +76,19 @@ class BudgetGUI: #klasse des budget planers
     def load_entries(self):
         self.listbox.delete(0, tk.END)
         for e in self.planner.list_entries():
-            sign = "+" if e.type == "income" else "-"
+            sign = "+" if e.type == "einkommen" else "-"
             self.listbox.insert(tk.END, f"{e.date} | {sign}{e.amount:.2f} € | {e.description}")
 
         income, expense, balance = self.planner.get_summary()
-        self.summary_label.config(text=f"Saldo: {balance:.2f} €")
+        self.summary_label.config(
+            text=f"Übriges Geld: {balance:.2f} €",
+            fg="green" if balance >= 0 else "red"
+        )
 
 def main():
     root = tk.Tk()
     app = BudgetGUI(root)
     root.mainloop()
 
-if __name__ == "__main__":
-    main()
+if _name_ == "_main_":
+    main()
