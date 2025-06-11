@@ -30,8 +30,8 @@ class BudgetGUI:  # klasse des budget planers
         self.amount_entry.grid(row=1, column=1)
 
         tk.Label(input_frame, text="Typ").grid(row=2, column=0)
-        self.type_var = tk.StringVar(value="income")
-        ttk.Combobox(input_frame, textvariable=self.type_var, values=["income", "expense"]).grid(row=2, column=1)
+        self.type_var = tk.StringVar(value="einkommen")
+        ttk.Combobox(input_frame, textvariable=self.type_var, values=["einkommen", "ausgaben"]).grid(row=2, column=1)
 
         tk.Button(input_frame, text="Hinzufügen", command=self.add_entry).grid(row=3, column=0, columnspan=2, pady=5)
 
@@ -40,7 +40,7 @@ class BudgetGUI:  # klasse des budget planers
 
         tk.Button(self.root, text="Eintrag löschen", command=self.delete_entry).pack(pady=5)
 
-        self.summary_label = tk.Label(self.root, text="Saldo: 0.00 €", font=("Arial", 12, "bold"))
+        self.summary_label = tk.Label(self.root, text="Übriges Geld: 0.00 €", font=("Arial", 12, "bold"))
         self.summary_label.pack(pady=5)
 
     def add_entry(self):
