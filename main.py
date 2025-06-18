@@ -116,14 +116,14 @@ class BudgetGUI:
         if letzter_lohn:
             min_sparen = letzter_lohn * 0.05
             max_sparen = letzter_lohn * 0.10
-            tipp_sparen = f"💡 Spartipp: Du solltest ca. {min_sparen:.2f}–{max_sparen:.2f} € (5–10 % von deinem Lohn) zurücklegen."
+            tipp_sparen = f" Spartipp: Du solltest ca. {min_sparen:.2f}–{max_sparen:.2f} € (5–10 % von deinem Lohn) zurücklegen."
 
             min_essen = letzter_lohn * 0.05
             max_essen = letzter_lohn * 0.10
-            tipp_essen = f"🍽️ Essens-Ausgaben: Ca. {min_essen:.2f}–{max_essen:.2f} € (5–10 % deines Lohns) als Budget einplanen."
+            tipp_essen = f" Essens-Ausgaben: Ca. {min_essen:.2f}–{max_essen:.2f} € (5–10 % deines Lohns) als Budget einplanen."
         else:
-            tipp_sparen = "💡 Spartipp: Lege bei regelmäßigem Einkommen idealerweise 5–10 % davon zurück."
-            tipp_essen = "🍽️ Essens-Ausgaben: Budgetiere ca. 5–10 % deines Einkommens fürs Essen."
+            tipp_sparen = " Spartipp: Lege bei regelmäßigem Einkommen idealerweise 5–10 % davon zurück."
+            tipp_essen = " Essens-Ausgaben: Budgetiere ca. 5–10 % deines Einkommens fürs Essen."
 
         gesamter_tipp = tipp_sparen + "\n" + tipp_essen
 
